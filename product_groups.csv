@@ -1,0 +1,9 @@
+group_id,store,name,price,url,volume
+1,super1,Milk 'Chanakh' 3.2% 450ml,1.2,https://super1.com/chanakh-450,450ml
+1,super3,Chanakh Milk 3.2% Fat 450 ml,1.15,https://super3.com/chanakh-fat-450,450ml
+2,super1,Red Gala Apples,1.8,https://super1.com/red-apples,
+2,super2,Gala Apples Red,1.9,https://super2.com/gala-red,
+2,super3,Organic Red Gala Apples,2.1,https://super3.com/org-gala,
+3,super1,Grey Hole Apples,1.8,https://super1.com/red-apples,
+4,super2,Milk 'Chanakh' 950ml richness: 3.2%,2.0,https://super2.com/chanakh-950,950ml
+4,super3,Chanakh Milk 3.2% Fat 950 ml,1.15,https://super3.com/chanakh-fat-450,950ml

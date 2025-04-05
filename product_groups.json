@@ -1,0 +1,74 @@
+[
+  [
+    {
+      "group_id": 1,
+      "store": "super1",
+      "name": "Milk 'Chanakh' 3.2% 450ml",
+      "price": 1.2,
+      "url": "https://super1.com/chanakh-450",
+      "volume": "450ml"
+    },
+    {
+      "group_id": 1,
+      "store": "super3",
+      "name": "Chanakh Milk 3.2% Fat 450 ml",
+      "price": 1.15,
+      "url": "https://super3.com/chanakh-fat-450",
+      "volume": "450ml"
+    }
+  ],
+  [
+    {
+      "group_id": 2,
+      "store": "super1",
+      "name": "Red Gala Apples",
+      "price": 1.8,
+      "url": "https://super1.com/red-apples",
+      "volume": null
+    },
+    {
+      "group_id": 2,
+      "store": "super2",
+      "name": "Gala Apples Red",
+      "price": 1.9,
+      "url": "https://super2.com/gala-red",
+      "volume": null
+    },
+    {
+      "group_id": 2,
+      "store": "super3",
+      "name": "Organic Red Gala Apples",
+      "price": 2.1,
+      "url": "https://super3.com/org-gala",
+      "volume": null
+    }
+  ],
+  [
+    {
+      "group_id": 3,
+      "store": "super1",
+      "name": "Grey Hole Apples",
+      "price": 1.8,
+      "url": "https://super1.com/red-apples",
+      "volume": null
+    }
+  ],
+  [
+    {
+      "group_id": 4,
+      "store": "super2",
+      "name": "Milk 'Chanakh' 950ml richness: 3.2%",
+      "price": 2.0,
+      "url": "https://super2.com/chanakh-950",
+      "volume": "950ml"
+    },
+    {
+      "group_id": 4,
+      "store": "super3",
+      "name": "Chanakh Milk 3.2% Fat 950 ml",
+      "price": 1.15,
+      "url": "https://super3.com/chanakh-fat-450",
+      "volume": "950ml"
+    }
+  ]
+]
