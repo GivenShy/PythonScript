@@ -1,0 +1,862 @@
+[
+  {
+    "name": "Whiskey",
+    "url": "https://www.yerevan-city.am/shop/products/109"
+  },
+  {
+    "name": "Cognac and Brandy",
+    "url": "https://www.yerevan-city.am/shop/products/116"
+  },
+  {
+    "name": "Vodka and Tinctures",
+    "url": "https://www.yerevan-city.am/shop/products/118"
+  },
+  {
+    "name": "Beer, cider and low alcohol cocktail",
+    "url": "https://www.yerevan-city.am/shop/products/119"
+  },
+  {
+    "name": "Alcohol in mini bottles",
+    "url": "https://www.yerevan-city.am/shop/products/121"
+  },
+  {
+    "name": "Tequila, absent, rum, liquor and gin",
+    "url": "https://www.yerevan-city.am/shop/products/127"
+  },
+  {
+    "name": "Wine, Vermouth, Sparkling wine",
+    "url": "https://www.yerevan-city.am/shop/products/1597"
+  },
+  {
+    "name": "Sets and souvenir bottles",
+    "url": "https://www.yerevan-city.am/shop/products/1601"
+  },
+  {
+    "name": "Chocolate bars",
+    "url": "https://www.yerevan-city.am/shop/products/55"
+  },
+  {
+    "name": "Marshmallows and Marmalade",
+    "url": "https://www.yerevan-city.am/shop/products/56"
+  },
+  {
+    "name": "Popcorn and candy cotton",
+    "url": "https://www.yerevan-city.am/shop/products/57"
+  },
+  {
+    "name": "Honey bars, lokum and halva",
+    "url": "https://www.yerevan-city.am/shop/products/58"
+  },
+  {
+    "name": "Gums, dragee and jelly",
+    "url": "https://www.yerevan-city.am/shop/products/59"
+  },
+  {
+    "name": "Candies",
+    "url": "https://www.yerevan-city.am/shop/products/60"
+  },
+  {
+    "name": "Confectionery",
+    "url": "https://www.yerevan-city.am/shop/products/85"
+  },
+  {
+    "name": "Nuts and dried fruits",
+    "url": "https://www.yerevan-city.am/shop/products/86"
+  },
+  {
+    "name": "Candy sets",
+    "url": "https://www.yerevan-city.am/shop/products/106"
+  },
+  {
+    "name": "Cake",
+    "url": "https://www.yerevan-city.am/shop/products/1929"
+  },
+  {
+    "name": "Pastry",
+    "url": "https://www.yerevan-city.am/shop/products/1934"
+  },
+  {
+    "name": "Bakery",
+    "url": "https://www.yerevan-city.am/shop/products/1969"
+  },
+  {
+    "name": "Cheese",
+    "url": "https://www.yerevan-city.am/shop/products/130"
+  },
+  {
+    "name": "Butter, margarine and spread",
+    "url": "https://www.yerevan-city.am/shop/products/185"
+  },
+  {
+    "name": "Ice cream and ice",
+    "url": "https://www.yerevan-city.am/shop/products/186"
+  },
+  {
+    "name": "Sour cream",
+    "url": "https://www.yerevan-city.am/shop/products/187"
+  },
+  {
+    "name": "Cream and fermented milk product",
+    "url": "https://www.yerevan-city.am/shop/products/188"
+  },
+  {
+    "name": "Cottage cheese and curd products",
+    "url": "https://www.yerevan-city.am/shop/products/189"
+  },
+  {
+    "name": "Milk and milk cocktail",
+    "url": "https://www.yerevan-city.am/shop/products/190"
+  },
+  {
+    "name": "Kefir, ayran, okroshka and spas",
+    "url": "https://www.yerevan-city.am/shop/products/191"
+  },
+  {
+    "name": "Yogurts",
+    "url": "https://www.yerevan-city.am/shop/products/192"
+  },
+  {
+    "name": "Matsun, strained matsun",
+    "url": "https://www.yerevan-city.am/shop/products/193"
+  },
+  {
+    "name": "Lactose free dairy products",
+    "url": "https://www.yerevan-city.am/shop/products/2152"
+  },
+  {
+    "name": "Frozen meat",
+    "url": "https://www.yerevan-city.am/shop/products/104"
+  },
+  {
+    "name": "Sausage and delicacies",
+    "url": "https://www.yerevan-city.am/shop/products/128"
+  },
+  {
+    "name": "Marinated meat",
+    "url": "https://www.yerevan-city.am/shop/products/1931"
+  },
+  {
+    "name": "Barbecue house",
+    "url": "https://www.yerevan-city.am/shop/products/1932"
+  },
+  {
+    "name": "Meat",
+    "url": "https://www.yerevan-city.am/shop/products/1933"
+  },
+  {
+    "name": "Grill",
+    "url": "https://www.yerevan-city.am/shop/products/1939"
+  },
+  {
+    "name": "Salads",
+    "url": "https://www.yerevan-city.am/shop/products/1940"
+  },
+  {
+    "name": "Dishes",
+    "url": "https://www.yerevan-city.am/shop/products/1941"
+  },
+  {
+    "name": "",
+    "url": "https://www.yerevan-city.am/shop/products/2038"
+  },
+  {
+    "name": "Olives",
+    "url": "https://www.yerevan-city.am/shop/products/2039"
+  },
+  {
+    "name": "Pickles and marinades",
+    "url": "https://www.yerevan-city.am/shop/products/2042"
+  },
+  {
+    "name": "Quail and ostrich eggs",
+    "url": "https://www.yerevan-city.am/shop/products/216"
+  },
+  {
+    "name": "Egg",
+    "url": "https://www.yerevan-city.am/shop/products/254"
+  },
+  {
+    "name": "Turkey, goose meat",
+    "url": "https://www.yerevan-city.am/shop/products/318"
+  },
+  {
+    "name": "Frozen chicken meat",
+    "url": "https://www.yerevan-city.am/shop/products/319"
+  },
+  {
+    "name": "Fresh chicken meat",
+    "url": "https://www.yerevan-city.am/shop/products/320"
+  },
+  {
+    "name": "Semi-cooked dough products",
+    "url": "https://www.yerevan-city.am/shop/products/65"
+  },
+  {
+    "name": "Semi-cooked products",
+    "url": "https://www.yerevan-city.am/shop/products/2125"
+  },
+  {
+    "name": "Semi-cooked meat products",
+    "url": "https://www.yerevan-city.am/shop/products/2180"
+  },
+  {
+    "name": "Semi-cooked dough products",
+    "url": "https://www.yerevan-city.am/shop/products/2191"
+  },
+  {
+    "name": "Frozen fruits, vegetables and berries",
+    "url": "https://www.yerevan-city.am/shop/products/2196"
+  },
+  {
+    "name": "Frozen meat",
+    "url": "https://www.yerevan-city.am/shop/products/2199"
+  },
+  {
+    "name": "Smoked and dried fish",
+    "url": "https://www.yerevan-city.am/shop/products/110"
+  },
+  {
+    "name": "Caviar",
+    "url": "https://www.yerevan-city.am/shop/products/111"
+  },
+  {
+    "name": "Frozen seafood",
+    "url": "https://www.yerevan-city.am/shop/products/114"
+  },
+  {
+    "name": "Fish preserves",
+    "url": "https://www.yerevan-city.am/shop/products/115"
+  },
+  {
+    "name": "Frozen fish and seafood",
+    "url": "https://www.yerevan-city.am/shop/products/1942"
+  },
+  {
+    "name": "Fresh fish",
+    "url": "https://www.yerevan-city.am/shop/products/1943"
+  },
+  {
+    "name": "Crayfish",
+    "url": "https://www.yerevan-city.am/shop/products/1944"
+  },
+  {
+    "name": "Caviar",
+    "url": "https://www.yerevan-city.am/shop/products/1945"
+  },
+  {
+    "name": "Smoked and dried fish",
+    "url": "https://www.yerevan-city.am/shop/products/1946"
+  },
+  {
+    "name": "Fish preserves",
+    "url": "https://www.yerevan-city.am/shop/products/1947"
+  },
+  {
+    "name": "Saltwater fish",
+    "url": "https://www.yerevan-city.am/shop/products/1948"
+  },
+  {
+    "name": "Fresh vegetables",
+    "url": "https://www.yerevan-city.am/shop/products/1957"
+  },
+  {
+    "name": "Greens",
+    "url": "https://www.yerevan-city.am/shop/products/1963"
+  },
+  {
+    "name": "Fresh salads",
+    "url": "https://www.yerevan-city.am/shop/products/1964"
+  },
+  {
+    "name": "Fresh juices",
+    "url": "https://www.yerevan-city.am/shop/products/1965"
+  },
+  {
+    "name": "Fresh nuts and seeds",
+    "url": "https://www.yerevan-city.am/shop/products/1966"
+  },
+  {
+    "name": "Fresh mushrooms",
+    "url": "https://www.yerevan-city.am/shop/products/1967"
+  },
+  {
+    "name": "Fresh fruits and berries",
+    "url": "https://www.yerevan-city.am/shop/products/1968"
+  },
+  {
+    "name": "Mayonnaise and Ketchup",
+    "url": "https://www.yerevan-city.am/shop/products/296"
+  },
+  {
+    "name": "Sweet canned food",
+    "url": "https://www.yerevan-city.am/shop/products/298"
+  },
+  {
+    "name": "Pickled canned food",
+    "url": "https://www.yerevan-city.am/shop/products/299"
+  },
+  {
+    "name": "Canned meat, fish",
+    "url": "https://www.yerevan-city.am/shop/products/300"
+  },
+  {
+    "name": "Sauces",
+    "url": "https://www.yerevan-city.am/shop/products/301"
+  },
+  {
+    "name": "Olives",
+    "url": "https://www.yerevan-city.am/shop/products/302"
+  },
+  {
+    "name": "Baked canned food",
+    "url": "https://www.yerevan-city.am/shop/products/303"
+  },
+  {
+    "name": "Tomato paste",
+    "url": "https://www.yerevan-city.am/shop/products/304"
+  },
+  {
+    "name": "Flour and leavening agents",
+    "url": "https://www.yerevan-city.am/shop/products/92"
+  },
+  {
+    "name": "Groats",
+    "url": "https://www.yerevan-city.am/shop/products/93"
+  },
+  {
+    "name": "Vinegar and lemon concentrate",
+    "url": "https://www.yerevan-city.am/shop/products/94"
+  },
+  {
+    "name": "Oil and melted butter",
+    "url": "https://www.yerevan-city.am/shop/products/96"
+  },
+  {
+    "name": "Jelly, gelatin and kissel",
+    "url": "https://www.yerevan-city.am/shop/products/97"
+  },
+  {
+    "name": "Seasonings and spices",
+    "url": "https://www.yerevan-city.am/shop/products/98"
+  },
+  {
+    "name": "Sugar, salt and soda",
+    "url": "https://www.yerevan-city.am/shop/products/99"
+  },
+  {
+    "name": "Flakes and muesli",
+    "url": "https://www.yerevan-city.am/shop/products/100"
+  },
+  {
+    "name": "Oat flakes and porridge",
+    "url": "https://www.yerevan-city.am/shop/products/101"
+  },
+  {
+    "name": "Pasta and soups",
+    "url": "https://www.yerevan-city.am/shop/products/105"
+  },
+  {
+    "name": "Tea",
+    "url": "https://www.yerevan-city.am/shop/products/198"
+  },
+  {
+    "name": "Cream",
+    "url": "https://www.yerevan-city.am/shop/products/199"
+  },
+  {
+    "name": "Cocoa",
+    "url": "https://www.yerevan-city.am/shop/products/200"
+  },
+  {
+    "name": "Coffee",
+    "url": "https://www.yerevan-city.am/shop/products/201"
+  },
+  {
+    "name": "Crackers",
+    "url": "https://www.yerevan-city.am/shop/products/153"
+  },
+  {
+    "name": "Corn",
+    "url": "https://www.yerevan-city.am/shop/products/154"
+  },
+  {
+    "name": "Chips",
+    "url": "https://www.yerevan-city.am/shop/products/155"
+  },
+  {
+    "name": "Seeds",
+    "url": "https://www.yerevan-city.am/shop/products/156"
+  },
+  {
+    "name": "Refreshing drinks",
+    "url": "https://www.yerevan-city.am/shop/products/176"
+  },
+  {
+    "name": "Water",
+    "url": "https://www.yerevan-city.am/shop/products/177"
+  },
+  {
+    "name": "Juices and compots",
+    "url": "https://www.yerevan-city.am/shop/products/178"
+  },
+  {
+    "name": "Kids drinks",
+    "url": "https://www.yerevan-city.am/shop/products/179"
+  },
+  {
+    "name": "Energetic drinks",
+    "url": "https://www.yerevan-city.am/shop/products/180"
+  },
+  {
+    "name": "Tonics  and Cocktails",
+    "url": "https://www.yerevan-city.am/shop/products/181"
+  },
+  {
+    "name": "Sports drinks",
+    "url": "https://www.yerevan-city.am/shop/products/184"
+  },
+  {
+    "name": "Children's food",
+    "url": "https://www.yerevan-city.am/shop/products/129"
+  },
+  {
+    "name": "Diabetic nutrition",
+    "url": "https://www.yerevan-city.am/shop/products/172"
+  },
+  {
+    "name": "Gluten free products",
+    "url": "https://www.yerevan-city.am/shop/products/1495"
+  },
+  {
+    "name": "Organic products",
+    "url": "https://www.yerevan-city.am/shop/products/1506"
+  },
+  {
+    "name": "",
+    "url": "https://www.yerevan-city.am/shop/products/1567"
+  },
+  {
+    "name": "Tobacco product",
+    "url": "https://www.yerevan-city.am/shop/products/1568"
+  },
+  {
+    "name": "",
+    "url": "https://www.yerevan-city.am/shop/products/1569"
+  },
+  {
+    "name": "Cotton products",
+    "url": "https://www.yerevan-city.am/shop/products/218"
+  },
+  {
+    "name": "Bath and shower goods",
+    "url": "https://www.yerevan-city.am/shop/products/226"
+  },
+  {
+    "name": "Oral care",
+    "url": "https://www.yerevan-city.am/shop/products/227"
+  },
+  {
+    "name": "Feminine hygiene products",
+    "url": "https://www.yerevan-city.am/shop/products/228"
+  },
+  {
+    "name": "Body and face care",
+    "url": "https://www.yerevan-city.am/shop/products/230"
+  },
+  {
+    "name": "Soap",
+    "url": "https://www.yerevan-city.am/shop/products/231"
+  },
+  {
+    "name": "Wet-shaving supplies",
+    "url": "https://www.yerevan-city.am/shop/products/232"
+  },
+  {
+    "name": "Hair care",
+    "url": "https://www.yerevan-city.am/shop/products/233"
+  },
+  {
+    "name": "Antibacterial agents",
+    "url": "https://www.yerevan-city.am/shop/products/252"
+  },
+  {
+    "name": "Paper products",
+    "url": "https://www.yerevan-city.am/shop/products/273"
+  },
+  {
+    "name": "Cleaning goods",
+    "url": "https://www.yerevan-city.am/shop/products/313"
+  },
+  {
+    "name": "Laundry and clothing care",
+    "url": "https://www.yerevan-city.am/shop/products/314"
+  },
+  {
+    "name": "Car accessories",
+    "url": "https://www.yerevan-city.am/shop/products/234"
+  },
+  {
+    "name": "Sewing goods",
+    "url": "https://www.yerevan-city.am/shop/products/235"
+  },
+  {
+    "name": "Gift packing materials",
+    "url": "https://www.yerevan-city.am/shop/products/236"
+  },
+  {
+    "name": "Bath supplies and accessories",
+    "url": "https://www.yerevan-city.am/shop/products/242"
+  },
+  {
+    "name": "Cleaning and laundry goods",
+    "url": "https://www.yerevan-city.am/shop/products/243"
+  },
+  {
+    "name": "Fresheners, candles and frankincense",
+    "url": "https://www.yerevan-city.am/shop/products/247"
+  },
+  {
+    "name": "Remedies against insects and rodents",
+    "url": "https://www.yerevan-city.am/shop/products/248"
+  },
+  {
+    "name": "Storage goods",
+    "url": "https://www.yerevan-city.am/shop/products/249"
+  },
+  {
+    "name": "Floor mats",
+    "url": "https://www.yerevan-city.am/shop/products/250"
+  },
+  {
+    "name": "Kitchen packing materials",
+    "url": "https://www.yerevan-city.am/shop/products/251"
+  },
+  {
+    "name": "Toys for girls",
+    "url": "https://www.yerevan-city.am/shop/products/323"
+  },
+  {
+    "name": "Toys for boys",
+    "url": "https://www.yerevan-city.am/shop/products/325"
+  },
+  {
+    "name": "Soft toys",
+    "url": "https://www.yerevan-city.am/shop/products/342"
+  },
+  {
+    "name": "Flying toys",
+    "url": "https://www.yerevan-city.am/shop/products/343"
+  },
+  {
+    "name": "Toy sets",
+    "url": "https://www.yerevan-city.am/shop/products/344"
+  },
+  {
+    "name": "Educational toys",
+    "url": "https://www.yerevan-city.am/shop/products/345"
+  },
+  {
+    "name": "Summer games and toys",
+    "url": "https://www.yerevan-city.am/shop/products/348"
+  },
+  {
+    "name": "Surprise toys",
+    "url": "https://www.yerevan-city.am/shop/products/349"
+  },
+  {
+    "name": "Musical toys",
+    "url": "https://www.yerevan-city.am/shop/products/350"
+  },
+  {
+    "name": "Toys for babies",
+    "url": "https://www.yerevan-city.am/shop/products/351"
+  },
+  {
+    "name": "Food storage",
+    "url": "https://www.yerevan-city.am/shop/products/331"
+  },
+  {
+    "name": "Disposable tableware",
+    "url": "https://www.yerevan-city.am/shop/products/332"
+  },
+  {
+    "name": "Water accessories",
+    "url": "https://www.yerevan-city.am/shop/products/333"
+  },
+  {
+    "name": "Kids tableware",
+    "url": "https://www.yerevan-city.am/shop/products/334"
+  },
+  {
+    "name": "Kitchen utensils",
+    "url": "https://www.yerevan-city.am/shop/products/335"
+  },
+  {
+    "name": "Cutlery",
+    "url": "https://www.yerevan-city.am/shop/products/336"
+  },
+  {
+    "name": "Dinnerware",
+    "url": "https://www.yerevan-city.am/shop/products/337"
+  },
+  {
+    "name": "Cookware and bakeware",
+    "url": "https://www.yerevan-city.am/shop/products/338"
+  },
+  {
+    "name": "Newborns accessories",
+    "url": "https://www.yerevan-city.am/shop/products/280"
+  },
+  {
+    "name": "Baby care",
+    "url": "https://www.yerevan-city.am/shop/products/281"
+  },
+  {
+    "name": "Baby laundry detergents",
+    "url": "https://www.yerevan-city.am/shop/products/282"
+  },
+  {
+    "name": "Baby diapers",
+    "url": "https://www.yerevan-city.am/shop/products/283"
+  },
+  {
+    "name": "Baby oral care",
+    "url": "https://www.yerevan-city.am/shop/products/287"
+  },
+  {
+    "name": "Baby wet wipes",
+    "url": "https://www.yerevan-city.am/shop/products/288"
+  },
+  {
+    "name": "",
+    "url": "https://www.yerevan-city.am/shop/products/1554"
+  },
+  {
+    "name": "Paper products",
+    "url": "https://www.yerevan-city.am/shop/products/256"
+  },
+  {
+    "name": "Bags and briefcases",
+    "url": "https://www.yerevan-city.am/shop/products/257"
+  },
+  {
+    "name": "Desktop accessories",
+    "url": "https://www.yerevan-city.am/shop/products/258"
+  },
+  {
+    "name": "Folders, pencil cases",
+    "url": "https://www.yerevan-city.am/shop/products/259"
+  },
+  {
+    "name": "Products for children's creativity",
+    "url": "https://www.yerevan-city.am/shop/products/260"
+  },
+  {
+    "name": "Photo albums",
+    "url": "https://www.yerevan-city.am/shop/products/261"
+  },
+  {
+    "name": "Goods for study",
+    "url": "https://www.yerevan-city.am/shop/products/262"
+  },
+  {
+    "name": "Office supplies",
+    "url": "https://www.yerevan-city.am/shop/products/271"
+  },
+  {
+    "name": "Products for writing and drawing",
+    "url": "https://www.yerevan-city.am/shop/products/272"
+  },
+  {
+    "name": "Clothes",
+    "url": "https://www.yerevan-city.am/shop/products/42"
+  },
+  {
+    "name": "Slippers",
+    "url": "https://www.yerevan-city.am/shop/products/67"
+  },
+  {
+    "name": "Underwear",
+    "url": "https://www.yerevan-city.am/shop/products/306"
+  },
+  {
+    "name": "Socks",
+    "url": "https://www.yerevan-city.am/shop/products/307"
+  },
+  {
+    "name": "Tights and knee-highs",
+    "url": "https://www.yerevan-city.am/shop/products/308"
+  },
+  {
+    "name": "Bath accessories",
+    "url": "https://www.yerevan-city.am/shop/products/309"
+  },
+  {
+    "name": "Kitchen utensils",
+    "url": "https://www.yerevan-city.am/shop/products/315"
+  },
+  {
+    "name": "Bedding",
+    "url": "https://www.yerevan-city.am/shop/products/316"
+  },
+  {
+    "name": "Shoe accessories",
+    "url": "https://www.yerevan-city.am/shop/products/317"
+  },
+  {
+    "name": "Shoe care",
+    "url": "https://www.yerevan-city.am/shop/products/321"
+  },
+  {
+    "name": "Kitchen appliances",
+    "url": "https://www.yerevan-city.am/shop/products/46"
+  },
+  {
+    "name": "Household appliances",
+    "url": "https://www.yerevan-city.am/shop/products/47"
+  },
+  {
+    "name": "Bags and cases",
+    "url": "https://www.yerevan-city.am/shop/products/175"
+  },
+  {
+    "name": "Cameras",
+    "url": "https://www.yerevan-city.am/shop/products/183"
+  },
+  {
+    "name": "Selfie sticks and phone holders",
+    "url": "https://www.yerevan-city.am/shop/products/202"
+  },
+  {
+    "name": "CD and USB sticks",
+    "url": "https://www.yerevan-city.am/shop/products/203"
+  },
+  {
+    "name": "Modulators",
+    "url": "https://www.yerevan-city.am/shop/products/204"
+  },
+  {
+    "name": "Computer care",
+    "url": "https://www.yerevan-city.am/shop/products/206"
+  },
+  {
+    "name": "Speakers, microphones and headphones",
+    "url": "https://www.yerevan-city.am/shop/products/207"
+  },
+  {
+    "name": "Keyboards, mouses and remote controls",
+    "url": "https://www.yerevan-city.am/shop/products/208"
+  },
+  {
+    "name": "Cables and chargers",
+    "url": "https://www.yerevan-city.am/shop/products/215"
+  },
+  {
+    "name": "Garden products",
+    "url": "https://www.yerevan-city.am/shop/products/264"
+  },
+  {
+    "name": "Furniture",
+    "url": "https://www.yerevan-city.am/shop/products/265"
+  },
+  {
+    "name": "Bags, suitcases",
+    "url": "https://www.yerevan-city.am/shop/products/266"
+  },
+  {
+    "name": "Thermal storage",
+    "url": "https://www.yerevan-city.am/shop/products/267"
+  },
+  {
+    "name": "Goods for barbecue",
+    "url": "https://www.yerevan-city.am/shop/products/270"
+  },
+  {
+    "name": "Soil for plants",
+    "url": "https://www.yerevan-city.am/shop/products/88"
+  },
+  {
+    "name": "Seeds and bulbs",
+    "url": "https://www.yerevan-city.am/shop/products/89"
+  },
+  {
+    "name": "Fertilizers and drainage",
+    "url": "https://www.yerevan-city.am/shop/products/90"
+  },
+  {
+    "name": "Garden supplies",
+    "url": "https://www.yerevan-city.am/shop/products/91"
+  },
+  {
+    "name": "Pots",
+    "url": "https://www.yerevan-city.am/shop/products/95"
+  },
+  {
+    "name": "Flowers",
+    "url": "https://www.yerevan-city.am/shop/products/108"
+  },
+  {
+    "name": "Christmas tree",
+    "url": "https://www.yerevan-city.am/shop/products/126"
+  },
+  {
+    "name": "Sleds",
+    "url": "https://www.yerevan-city.am/shop/products/293"
+  },
+  {
+    "name": "Children's cars",
+    "url": "https://www.yerevan-city.am/shop/products/294"
+  },
+  {
+    "name": "Scooters, skateboards, rollers",
+    "url": "https://www.yerevan-city.am/shop/products/322"
+  },
+  {
+    "name": "Sports attributes",
+    "url": "https://www.yerevan-city.am/shop/products/340"
+  },
+  {
+    "name": "Bicycles",
+    "url": "https://www.yerevan-city.am/shop/products/346"
+  },
+  {
+    "name": "Training apparatus",
+    "url": "https://www.yerevan-city.am/shop/products/347"
+  },
+  {
+    "name": "Sports accessories",
+    "url": "https://www.yerevan-city.am/shop/products/352"
+  },
+  {
+    "name": "Electrical goods",
+    "url": "https://www.yerevan-city.am/shop/products/225"
+  },
+  {
+    "name": "Protective accessories",
+    "url": "https://www.yerevan-city.am/shop/products/268"
+  },
+  {
+    "name": "Festive goods",
+    "url": "https://www.yerevan-city.am/shop/products/305"
+  },
+  {
+    "name": "Bird food",
+    "url": "https://www.yerevan-city.am/shop/products/1611"
+  },
+  {
+    "name": "Cat food",
+    "url": "https://www.yerevan-city.am/shop/products/1612"
+  },
+  {
+    "name": "Dog food",
+    "url": "https://www.yerevan-city.am/shop/products/1613"
+  },
+  {
+    "name": "Accessories for animals",
+    "url": "https://www.yerevan-city.am/shop/products/1625"
+  },
+  {
+    "name": "Food for other animals",
+    "url": "https://www.yerevan-city.am/shop/products/1626"
+  }
+]

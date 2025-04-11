@@ -6,6 +6,9 @@ from dataclasses import dataclass
 from typing import List, Optional
 from sentence_transformers import SentenceTransformer, util
 from collections import defaultdict
+import psycopg2
+
+
 
 # ------------------------------
 # 🧱 Product class
@@ -16,10 +19,10 @@ class Product:
     url: str
     price: float
     store: str
+    subcategory_url: str
+    image_url: Optional[str] = None
     embedding: Optional[any] = None
     volume: Optional[str] = None
-
-
 # ------------------------------
 # 🧪 Volume extractor
 # ------------------------------
@@ -38,23 +41,52 @@ def extract_volume(text: str) -> Optional[str]:
         return f"{int(num)}{unit}"
     return None
 
+def clean_price(price_str: str) -> float:
+    
+    # Remove non-numeric characters and convert to float
+    return float(re.sub(r"[^\d.]", "", price_str.replace('\xa0', '')))
+
+    
 
 # ------------------------------
 # 📥 Load products from JSON
 # ------------------------------
+# def load_products(json_files: List[str]) -> List[Product]:
+#     products = []
+#     for file in json_files:
+#         store_name = file.split('.')[0]
+#         with open(file, 'r', encoding='utf-8') as f:
+#             data = json.load(f)
+#             for item in data:
+#                 volume = extract_volume(item["name"])
+#                 products.append(Product(
+#                     name=item["name"],
+#                     url=item["url"],
+#                     price=item["price"],
+#                     store=store_name,
+#                     volume=volume
+#                 ))
+#     return products
+
 def load_products(json_files: List[str]) -> List[Product]:
     products = []
     for file in json_files:
-        store_name = file.split('.')[0]
         with open(file, 'r', encoding='utf-8') as f:
             data = json.load(f)
             for item in data:
                 volume = extract_volume(item["name"])
+                try:
+                    price = clean_price(item["price"])
+                except Exception as e:
+                    print(item["name"])
+                    raise
                 products.append(Product(
                     name=item["name"],
                     url=item["url"],
-                    price=item["price"],
-                    store=store_name,
+                    price=price,
+                    store=item["store"],
+                    subcategory_url=item["scrapeCategory"]["url"],
+                    image_url=item.get("imageUrl"),
                     volume=volume
                 ))
     return products
@@ -73,9 +105,8 @@ def generate_embeddings(products: List[Product], model_name='all-MiniLM-L6-v2'):
 
 
 # ------------------------------
-# 🔗 Group similar products
-# ------------------------------
-# def group_similar_products(products: List[Product], embeddings, threshold=0.80):
+# 🔍 Group similar products
+# def group_top_n_with_threshold(products: List[Product], embeddings, threshold=0.80, max_group_size=3):
 #     sim_matrix = util.cos_sim(embeddings, embeddings).numpy()
 #     n = len(products)
 #     used = set()
@@ -85,53 +116,62 @@ def generate_embeddings(products: List[Product], model_name='all-MiniLM-L6-v2'):
 #         if i in used:
 #             continue
 
-#         current = products[i]
-#         group_candidates = []
+#         base = products[i]
+#         group = [base]
+#         stores_in_group = {base.store}
+#         used.add(i)
 
-#         # Compare against others
-#         for j in range(i + 1, n):
-#             if sim_matrix[i][j] >= threshold:
-#                 group_candidates.append((j, sim_matrix[i][j]))
+#         candidates = []
 
-#         # Always include the base product
-#         group_raw = [current]
-#         stores_seen = {current.store}
-#         volumes_seen = {current.volume}
+#         for j in range(n):
+#             if i == j:
+#                 continue
 
-#         for j, score in sorted(group_candidates, key=lambda x: -x[1]):
+#             candidate = products[j]
+#             sim = sim_matrix[i][j]
+
+#             if sim < threshold:
+#                 continue
+
+#             if candidate.store in stores_in_group:
+#                 continue
+
+#             if base.volume and candidate.volume and base.volume != candidate.volume:
+#                 continue
+
+#             candidates.append((j, sim))
+
+#         # Sort by similarity and pick top remaining slots
+#         candidates.sort(key=lambda x: -x[1])
+#         for j, sim in candidates:
+#             if len(group) >= max_group_size:
+#                 break
+
 #             candidate = products[j]
 
-#             if candidate.store in stores_seen:
-#                 continue  # only one per store
+#             if candidate.store not in stores_in_group:
+#                 group.append(candidate)
+#                 used.add(j)
+#                 stores_in_group.add(candidate.store)
 
-#             if current.volume and candidate.volume and candidate.volume != current.volume:
-#                 continue  # only match if same volume (or volume missing)
-
-#             group_raw.append(candidate)
-#             stores_seen.add(candidate.store)
-#             volumes_seen.add(candidate.volume)
-
-#         # Mark used
-#         group_indices = [products.index(p) for p in group_raw]
-#         used.update(group_indices)
-#         groups.append(group_raw)
+#         groups.append(group)
 
 #     return groups
 
 def group_top_n_with_threshold(products: List[Product], embeddings, threshold=0.80, max_group_size=3):
     sim_matrix = util.cos_sim(embeddings, embeddings).numpy()
     n = len(products)
-    used = set()
+    used_products = set()
     groups = []
 
     for i in range(n):
-        if i in used:
+        base = products[i]
+        if id(base) in used_products:
             continue
 
-        base = products[i]
         group = [base]
         stores_in_group = {base.store}
-        used.add(i)
+        used_products.add(id(base))
 
         candidates = []
 
@@ -140,6 +180,9 @@ def group_top_n_with_threshold(products: List[Product], embeddings, threshold=0.
                 continue
 
             candidate = products[j]
+            if id(candidate) in used_products:
+                continue
+
             sim = sim_matrix[i][j]
 
             if sim < threshold:
@@ -153,18 +196,16 @@ def group_top_n_with_threshold(products: List[Product], embeddings, threshold=0.
 
             candidates.append((j, sim))
 
-        # Sort by similarity and pick top remaining slots
         candidates.sort(key=lambda x: -x[1])
         for j, sim in candidates:
             if len(group) >= max_group_size:
                 break
 
             candidate = products[j]
-
             if candidate.store not in stores_in_group:
                 group.append(candidate)
-                used.add(j)
                 stores_in_group.add(candidate.store)
+                used_products.add(id(candidate))
 
         groups.append(group)
 
@@ -206,18 +247,102 @@ def export_grouped_products(groups, csv_path="product_groups.csv", json_path="pr
     print(f"\nExported {len(groups)} groups to '{csv_path}' and '{json_path}'")
 
 
+def generate_sql_for_groups(groups: List[List[Product]], product_meta_table="ProductMeta", product_table="Product"):
+    sql_statements = []
+
+    store_name_to_id = {
+        "sas": 1,
+        "yerevan_city": 2,
+        "supermarket.am": 3
+    }
+
+    for group_id, group in enumerate(groups, start=1):
+        base_product = next((p for p in group if p.store == "yerevan_city"), group[0])
+
+        subcategory_url = base_product.subcategory_url
+        supermarket_name = base_product.store
+        product_meta_name = base_product.name.replace("'", "''")[:100]
+        product_meta_image = base_product.image_url or ''
+
+        sql_statements.append(f"""
+-- Group {group_id}
+WITH meta_insert AS (
+    INSERT INTO "{product_meta_table}" ("Name", "Image", "Description", "SubcategoryId")
+    VALUES (
+        '{product_meta_name}',
+        '{product_meta_image}',
+        NULL,
+        NULL
+    )
+    RETURNING "Id" AS meta_id
+)
+""")
+
+        values = []
+        for product in group:
+            product_name = product.name.replace("'", "''")
+            product_url = product.url
+            price = product.price
+            sub_url = product.subcategory_url
+            store = product.store
+            store_id = store_name_to_id[store]
+
+            values.append(f"""(
+    '{product_name}',
+    {price},
+    '{product_url}',
+    (SELECT "Id" FROM "Subcategory" WHERE "URL" = '{sub_url}' AND "SupermarketId" = {store_id}),
+    (SELECT meta_id FROM meta_insert),
+    {store_id}
+)""")
+
+        joined_values = ",\n".join(values)
+
+        sql_statements.append(f"""
+INSERT INTO "{product_table}" ("Name", "Price", "URL", "SubcategoryId", "ProductMetaId", "SupermarketId")
+VALUES
+{joined_values};
+""")
+
+    return "\n".join(sql_statements)
+
+
 # ------------------------------
 # 🚀 Main
 # ------------------------------
 if __name__ == "__main__":
-    json_files = glob.glob("super*.json")
+    json_files = glob.glob("products*.json")
     products = load_products(json_files)
+    print(f"Loaded {len(products)} products from {len(json_files)} files")
     model, embeddings = generate_embeddings(products)
     groups = group_top_n_with_threshold(products, embeddings, threshold=0.80)#//group_similar_products(products, embeddings, threshold=0.80)
 
     for i, group in enumerate(groups, start=1):
         print(f"\nGroup {i}")
+        
         for p in group:
-            print(f"{p.store} | {p.name} | ${p.price} | {p.volume} | {p.url}")
-
+            try:
+                print(f"{p.store} | {p.name} | ${p.price} | {p.volume} | {p.url}")
+            except Exception:
+                print(p.store+"|"+p.url+"-----------------------------------------")
+                
     export_grouped_products(groups)
+    sql_script = generate_sql_for_groups(groups)
+    with open("scriptSQL.txt", "w") as file:
+        file.write(sql_script)
+    #print(sql_script)
+    conn = psycopg2.connect(
+    dbname="shoper",
+    user="postgres",
+    password="11111111",  # ← replace this
+    host="localhost",
+    port="5432"
+    )  # connect to your DB
+    cursor = conn.cursor()
+
+    cursor = conn.cursor()
+    cursor.execute(sql_script)
+    conn.commit()
+    cursor.close()
+    conn.close()
+
