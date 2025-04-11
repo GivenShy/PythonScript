@@ -7,7 +7,7 @@ from typing import List, Optional
 from sentence_transformers import SentenceTransformer, util
 from collections import defaultdict
 import psycopg2
-
+import matplotlib.pyplot as plt 
 
 
 # ------------------------------
@@ -49,24 +49,7 @@ def clean_price(price_str: str) -> float:
     
 
 # ------------------------------
-# 📥 Load products from JSON
-# ------------------------------
-# def load_products(json_files: List[str]) -> List[Product]:
-#     products = []
-#     for file in json_files:
-#         store_name = file.split('.')[0]
-#         with open(file, 'r', encoding='utf-8') as f:
-#             data = json.load(f)
-#             for item in data:
-#                 volume = extract_volume(item["name"])
-#                 products.append(Product(
-#                     name=item["name"],
-#                     url=item["url"],
-#                     price=item["price"],
-#                     store=store_name,
-#                     volume=volume
-#                 ))
-#     return products
+# 📦 Load products from JSON files
 
 def load_products(json_files: List[str]) -> List[Product]:
     products = []
@@ -103,61 +86,21 @@ def generate_embeddings(products: List[Product], model_name='all-MiniLM-L6-v2'):
         products[i].embedding = emb
     return model, embeddings
 
+def print_histogram(sim_matrix):
+    sim_values = sim_matrix.flatten()
+    bins = 10
+    # Plot the histogram
+    plt.figure(figsize=(12, 8))
+    plt.hist(sim_values, bins=bins, color='blue', alpha=0.1)
+    plt.title("Histogram of Similarity Matrix Values")
+    plt.xlabel("Similarity Score")
+    plt.ylabel("Frequency")
+    plt.grid(axis='y', linestyle='--', alpha=0.1)
+    plt.show()
 
 # ------------------------------
 # 🔍 Group similar products
-# def group_top_n_with_threshold(products: List[Product], embeddings, threshold=0.80, max_group_size=3):
-#     sim_matrix = util.cos_sim(embeddings, embeddings).numpy()
-#     n = len(products)
-#     used = set()
-#     groups = []
-
-#     for i in range(n):
-#         if i in used:
-#             continue
-
-#         base = products[i]
-#         group = [base]
-#         stores_in_group = {base.store}
-#         used.add(i)
-
-#         candidates = []
-
-#         for j in range(n):
-#             if i == j:
-#                 continue
-
-#             candidate = products[j]
-#             sim = sim_matrix[i][j]
-
-#             if sim < threshold:
-#                 continue
-
-#             if candidate.store in stores_in_group:
-#                 continue
-
-#             if base.volume and candidate.volume and base.volume != candidate.volume:
-#                 continue
-
-#             candidates.append((j, sim))
-
-#         # Sort by similarity and pick top remaining slots
-#         candidates.sort(key=lambda x: -x[1])
-#         for j, sim in candidates:
-#             if len(group) >= max_group_size:
-#                 break
-
-#             candidate = products[j]
-
-#             if candidate.store not in stores_in_group:
-#                 group.append(candidate)
-#                 used.add(j)
-#                 stores_in_group.add(candidate.store)
-
-#         groups.append(group)
-
-#     return groups
-
+# ------------------------------
 def group_top_n_with_threshold(products: List[Product], embeddings, threshold=0.80, max_group_size=3):
     sim_matrix = util.cos_sim(embeddings, embeddings).numpy()
     n = len(products)
@@ -326,23 +269,23 @@ if __name__ == "__main__":
             except Exception:
                 print(p.store+"|"+p.url+"-----------------------------------------")
                 
-    export_grouped_products(groups)
-    sql_script = generate_sql_for_groups(groups)
-    with open("scriptSQL.txt", "w") as file:
-        file.write(sql_script)
-    #print(sql_script)
-    conn = psycopg2.connect(
-    dbname="shoper",
-    user="postgres",
-    password="11111111",  # ← replace this
-    host="localhost",
-    port="5432"
-    )  # connect to your DB
-    cursor = conn.cursor()
+    # export_grouped_products(groups)
+    # sql_script = generate_sql_for_groups(groups)
+    # with open("scriptSQL.txt", "w") as file:
+    #     file.write(sql_script)
+    # #print(sql_script)
+    # conn = psycopg2.connect(
+    # dbname="shoper",
+    # user="postgres",
+    # password="11111111",  # ← replace this
+    # host="localhost",
+    # port="5432"
+    # )  # connect to your DB
+    # cursor = conn.cursor()
 
-    cursor = conn.cursor()
-    cursor.execute(sql_script)
-    conn.commit()
-    cursor.close()
-    conn.close()
+    # cursor = conn.cursor()
+    # cursor.execute(sql_script)
+    # conn.commit()
+    # cursor.close()
+    # conn.close()
 
